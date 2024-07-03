@@ -108,7 +108,6 @@ button:hover {
   text-decoration: underline;
 }
 /* src/components/ChoosePlan.css */
-
 .choose-plan-container {
   padding: 70px;
   max-width: 1000px;
@@ -121,9 +120,8 @@ button:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); 
-
-} 
+  transform: translate(-50%, -50%);
+}
 
 .choose-plan-header {
   font-size: 29px;
@@ -142,11 +140,16 @@ button:hover {
   width: 30%;
   text-align: center;
   cursor: pointer;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease;
 }
 
 .plan:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.selected-plan {
+  background-color: #e6f7ff;
+  border: 2px solid #3a76e8;
 }
 
 .plan h3 {
@@ -163,7 +166,7 @@ button:hover {
 
 .plan-details {
   list-style-type: none;
-  color:#555c69;
+  color: #555c69;
   padding: 0;
   margin: 0;
 }
@@ -187,7 +190,6 @@ button:hover {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-weight: bold;
 }
 
 .cancel-button {
