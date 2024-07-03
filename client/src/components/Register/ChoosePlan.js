@@ -3,12 +3,20 @@ import React, { useState } from 'react';
 import './RegistrationForm.css';
 import MovingCircle from '../Intros/movingCircle';
 
-const ChoosePlan = ({ handleCancel }) => {
+const ChoosePlan = ({ handleCancel, handleContinue }) => {
   const [selectedPlan, setSelectedPlan] = useState('');
 
   const handlePlanClick = (plan) => {
     setSelectedPlan(plan);
     console.log(`Selected plan: ${plan}`);
+  };
+
+  const handleContinueClick = () => {
+    if (selectedPlan) {
+      handleContinue(selectedPlan);
+    } else {
+      alert('Please select a plan before continuing.');
+    }
   };
 
   return (
@@ -55,7 +63,7 @@ const ChoosePlan = ({ handleCancel }) => {
         </div>
         <div className="choose-plan-actions">
           <button className="cancel-button" onClick={handleCancel}>Cancel</button>
-          <button className="continue-button">Continue</button>
+          <button className="continue-button" onClick={handleContinueClick}>Continue</button>
         </div>
       </div>
       <MovingCircle className="first" size="100px" />

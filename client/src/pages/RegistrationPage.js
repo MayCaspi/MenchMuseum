@@ -3,25 +3,39 @@ import React, { useState } from 'react';
 import RegistrationForm from '../components/Register/RegistrationForm';
 import ChoosePlan from '../components/Register/ChoosePlan';
 import '../components/Register/RegistrationForm.css';
+import Payment from '../components/Register/payment';
 
 const RegistrationPage = () => {
-  const [showChoosePlan, setShowChoosePlan] = useState(false);
+  const [stage, setStage] = useState('registration');
+  const [selectedPlan, setSelectedPlan] = useState('');
 
   const handleChoosePlanClick = () => {
-    setShowChoosePlan(true);
+    setStage('choosePlan');
   };
 
-  const handleCancelClick = () => {
-    setShowChoosePlan(false);
+  const handlePlanSelected = (plan) => {
+    setSelectedPlan(plan);
+    setStage('payment');
   };
 
+  const handleBackToChoosePlan = () => {
+    setStage('choosePlan');
+  };
+
+  const handleCancel = () => {
+    setStage('registration');
+  };
 
   return (
     <div className="registration-page">
-      {showChoosePlan ? (
-        <ChoosePlan handleCancel={handleCancelClick} />
-      ) : (
+      {stage === 'registration' && (
         <RegistrationForm onChoosePlanClick={handleChoosePlanClick} />
+      )}
+      {stage === 'choosePlan' && (
+        <ChoosePlan handleCancel={handleCancel} handleContinue={handlePlanSelected} />
+      )}
+      {stage === 'payment' && (
+        <Payment selectedPlan={selectedPlan} handleBack={handleBackToChoosePlan} />
       )}
     </div>
   );

@@ -209,5 +209,190 @@ button:hover {
 .continue-button:hover {
   background-color: #004494;
 }
+/* src/components/Payment.css */
+.payment-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0; /* Optional: Add a background color */
+}
+
+.payment-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.order-summary {
+  width: 40%;
+  padding: 40px;
+  border-right: 1px solid #ccc;
+}
+
+.order-summary h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.plan-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.plan-price {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.payment-form-container {
+  width: 60%;
+  padding: 40px;
+}
+
+.payment-header {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.payment-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.card-input-group {
+  position: relative;
+}
+
+/* Add these styles to your existing CSS file */
+
+/* Ensure input-wrapper has relative positioning */
+.card-input-wrapper {
+  position: relative;
+}
+
+/* Style the input field to accommodate icons */
+.card-input-wrapper input {
+  width: 100%;
+  padding-right: 60px; /* Adjust padding to make space for the icons */
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Style the card icons inside the input field */
+/* Update card-icons container to fit the input field height */
+.card-icons {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 5px; /* Space between icons */
+  height: 100%;
+  align-items: center; /* Align icons vertically */
+}
+
+/* Update the size of the icons */
+.card-icons i {
+  font-size: 1.2em; /* Adjust icon size to fit the height of the input */
+  line-height: 2; /* Ensure icons are vertically centered */
+}
+
+
+.payment-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+
+.pay-button {
+  width: 45%;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  font-synthesis-weight:bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style for the back button */
+.back-button {
+  background: none;
+  border: none;
+  color: #3a76e8; /* Change to desired text color */
+  font-size: 1em; /* Adjust font size as needed */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between arrow and text */
+  padding: 0;
+}
+
+.back-button:hover {
+  background-color: transparent; /* Keep background transparent on hover */
+  color: #bbb; /* Change to desired hover text color */
+}
+
+/* Optional: Style the arrow */
+.back-arrow {
+  font-weight: bold;
+}
+
+
+/* Ensure the button uses flexbox to align items */
+.pay-button {
+  font-weight: bold;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  background-color: #3a76e8;
+  gap: 8px; /* Adjust the gap between text and icon */
+}
+
+/* Optional: Adjust icon size and margin if needed */
+.pay-button i {
+  margin-left: 8px; /* Adjust spacing to the right of the text */
+  font-size: 1em; /* Adjust icon size to fit the text */
+}
+
+
+.pay-button:hover {
+  background-color: #004494;
+}
+.total-price {
+  background-color: #f0f0f0; /* Light grey background */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
 
 

@@ -340,5 +340,12 @@
   font-weight: 900;
   font-style: italic;
 }
+/* Style for the total separator line */
+.total-separator {
+  border: 0;
+  height: 1px;
+  background: #ccc; /* Adjust the color to fit your design */
+  margin: 10px 0; /* Adjust the spacing as needed */
+}
 
 
