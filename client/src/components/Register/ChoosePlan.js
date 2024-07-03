@@ -1,0 +1,56 @@
+// src/components/ChoosePlan.js
+import React from 'react';
+import './RegistrationForm.css';
+import MovingCircle from '../Intros/movingCircle';
+
+const ChoosePlan = ({ handleCancel }) => {
+    const handlePlanClick = (plan) => {
+        console.log(`Selected plan: ${plan}`);
+        // Add logic to handle plan selection
+      };
+    return (
+        <div>
+            <div className="choose-plan-container">
+            <h2 className="choose-plan-header">Choose a Plan</h2>
+            <div className="choose-plan-content">
+                <div className="plan">
+                <h3>Basic Plan</h3>
+                <p className="plan-price">$100</p>
+                <ul className="plan-details">
+                    <li>✔ Exhibitions: Up to 20 exhibitions</li>
+                    <li>✔ Artworks: Manage up to 100 artworks</li>
+                    <li>✔ Features: Free editing, uploading, and recording of content</li>
+                </ul>
+                </div>
+                <div className="plan">
+                <h3>Premium Plan</h3>
+                <p className="plan-price">$300</p>
+                <ul className="plan-details">
+                    <li>✔ Exhibitions: Up to 50 exhibitions</li>
+                    <li>✔ Artworks: Manage up to 500 artworks</li>
+                    <li>✔ Features: All Basic features + exclusive content access</li>
+                </ul>
+                </div>
+                <div className="plan">
+                <h3>VIP Plan</h3>
+                <p className="plan-price">$900</p>
+                <ul className="plan-details">
+                    <li>✔ Exhibitions: Unlimited exhibitions</li>
+                    <li>✔ Artworks: Unlimited artworks</li>
+                    <li>✔ Features: All Premium features + VIP support and events</li>
+                </ul>
+                </div>
+            </div>
+            <div className="choose-plan-actions">
+                <button className="cancel-button" onClick={handleCancel}>Cancel</button>
+                <button className="continue-button">Continue</button>
+            </div>
+        </div>
+        <MovingCircle className="first" size="100px" />
+        <MovingCircle className="second" size="70px" />
+        <MovingCircle className="third" size="100px" />
+        </div>
+  );
+};
+
+export default ChoosePlan;
