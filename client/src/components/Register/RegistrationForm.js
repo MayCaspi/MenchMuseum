@@ -1,8 +1,6 @@
 // src/components/RegistrationForm.js
 import React, { useState } from 'react';
 import './RegistrationForm.css';
-import MovingCircle from '../Intros/movingCircle';
-
 
 const RegistrationForm = ({ onChoosePlanClick }) => {
   const [formData, setFormData] = useState({
@@ -106,9 +104,6 @@ const RegistrationForm = ({ onChoosePlanClick }) => {
              Already have an account? <a href="/login">Sign in now</a>
         </p>
       </form>
-      <MovingCircle className="first" size="100px" />
-      <MovingCircle className="second" size="70px" />
-      <MovingCircle className="third" size="100px" />
     </div>
   );
 };

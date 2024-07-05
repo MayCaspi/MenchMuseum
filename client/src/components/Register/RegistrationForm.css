@@ -10,7 +10,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: 'Poppins', sans-serif;
   text-align: center;
-  padding: 80px; /* Increased padding to give more space inside the form */
+  padding: 50px; /* Increased padding to give more space inside the form */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -215,7 +215,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0; /* Optional: Add a background color */
+  background-color: #f0f0f0 ; /* Optional: Add a background color */
 }
 
 .payment-container {
@@ -392,7 +392,3 @@ button:hover {
   padding: 10px;
   border-radius: 5px;
 }
-
-
-
-

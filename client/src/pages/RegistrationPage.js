@@ -4,6 +4,7 @@ import RegistrationForm from '../components/Register/RegistrationForm';
 import ChoosePlan from '../components/Register/ChoosePlan';
 import '../components/Register/RegistrationForm.css';
 import Payment from '../components/Register/payment';
+import LoadCircle from '../components/LoadCircle';
 
 const RegistrationPage = () => {
   const [stage, setStage] = useState('registration');
@@ -28,6 +29,7 @@ const RegistrationPage = () => {
 
   return (
     <div className="registration-page">
+      <LoadCircle/>
       {stage === 'registration' && (
         <RegistrationForm onChoosePlanClick={handleChoosePlanClick} />
       )}

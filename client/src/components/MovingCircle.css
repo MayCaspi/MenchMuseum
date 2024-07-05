@@ -1,0 +1,39 @@
+/* client/src/components/MovingCircle.css */
+@keyframes scale {
+  0%, 100% {
+    transform: scale(2.5);
+  }
+  50% {
+    transform: scale(3);
+  }
+}
+
+.moving-circle {
+  width: 100px; /* Increase the size */
+  height: 100px; /* Increase the size */
+  border-radius: 50%;
+  position: fixed; /* Change to fixed to position it relative to the viewport */
+  animation: scale 8s infinite; /* Slow down the animation */
+}
+
+.moving-circle.first {
+  background-color: #3a76e8;
+  bottom: 450px;
+  right: 0; /* Move up from the bottom */
+}
+
+.moving-circle.second {
+  background-color: #789de1;
+  opacity: 50%;
+  bottom: 440px; /* Different position */
+  right: 140px; /* Different position */
+}
+
+.moving-circle.third {
+  background-color: #789de1;
+  opacity: 50%;
+  bottom: 50px; /* Different position */
+  left:0; /* Different position */
+  z-index: -1; /* Ensures overlay is behind the content */
+
+}

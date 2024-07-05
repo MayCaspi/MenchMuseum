@@ -1,157 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.Intro {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1; /* Ensures content is above the overlay */
 
-@keyframes scaleBackground {
-  0%, 100% {
-    background-size: 100%;
   }
-  50% {
-    background-size: 110%;
+  
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #3a76e8;
   }
-}
-.Intro,
-.Intro3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  color: #333;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-  position: relative;
-  z-index: 1; /* Ensures content is above the overlay */
   
+  .container {
+    max-width: 400px;
+    width: 100%;
+  }
   
-}
-.container3{
-  margin-top: 6%;
-}
+  .illustration img, .symbols img {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px 0;
+    scale: 1.3;
+  }
 
-.Intro3 {
-  background-image: url('/public/assets/background.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  animation: scaleBackground 8s infinite; /* Add the scaling animation */
-
-}
-
-.Intro3::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(109, 153, 234, 0.5); /* Semi-transparent overlay with #3a76e8 color */
-  z-index: -1; /* Ensures overlay is behind the content */
-}
-
-.get-started {
-  margin-top: 20px;
-  padding: 10px 30px; /* Increase padding to make the button larger */
-  background-color: white;
-  color: #3a76e8;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 1.3em;
-  font-weight: bold;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-}
-.get-started .arrow {
-  margin-left: 8px; /* Space between text and arrow */
-  width: 20px; /* Increase arrow size */
-  height: 20px; /* Increase arrow size */
+  .symbols img{
+    scale: 1.8;
+    margin-left: 40px; /* Adjust this value as needed to move the image to the right */
+  }
   
-}
-.get-started:hover {
-  background-color: #f0f0f0;
-}
+  .content h1 {
+    font-size: 24px;
 
-.container {
-  max-width: 400px;
-  width: 100%;
-}
+  }
+  
+  .content p {
+    font-size: 16px;
+  }
+  
+  .get-started {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 20px;
+  }
+  
 
-.logo {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #3a76e8;
-}
-.logo2 {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: white;
-}
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
 
-.illustration img {
-  width: 100%;
-  max-width: 300px;
-  margin: 20px 0;
-  scale: 1.3;
+  .prev{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    background-color: #3a76e8;
+    color: white;
+  
+    font-size: 1em;
+    font-weight: bold;
+  
+  }
+  .prev:hover,
+.next:hover {
+  background-color: #345b99;
 }
-.symbols img {
-  width: 100%;
-  max-width: 300px;
-  margin: 20px 0;
-  scale: 1.8;
-  margin-left: 40px; /* Adjust this value as needed to move the image to the right */
-
-}
-
-.content h1 {
-  font-size: 1.2em;
-  margin: 10px 0;
-  color: #000;
-}
-
-.content p {
-  font-size: 0.9em;
-  color: #666;
-}
-.prev{
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 0 20px 20px 0;
-  cursor: pointer;
-  background-color: white;
-  color: #3a76e8;
-
-  font-size: 1em;
-  font-weight: bold;
-
-}
-.prev2{
-  position: absolute;
-  bottom: 20px;
-  background-color: #3a76e8;
-  color: white;
-  left: 0;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 0 20px 20px 0;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1em;
-}
-
-.next {
+  .next {
   position: absolute;
   bottom: 20px;
   right: 0;
   font-weight: bold;
-
   padding: 10px 20px;
   background-color: #3a76e8;
   color: white;
@@ -160,192 +93,17 @@
   cursor: pointer;
   font-size: 1em;
 }
-.prev:hover,
-.next:hover {
-  background-color: #345b99;
-}
-.prev2:hover{
-  background-color: #4e6ea0;
 
+.lastPrev{
+  position: absolute;
+  bottom: 20px;
+  background-color: white;
+  color: 3a76e8;
+  left: 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
 }
-
-.button-container .prev:hover{
-  background-color: #f0f0f0;
-}
-/* client/src/components/MovingCircle.css */
-@keyframes scale {
-  0%, 100% {
-    transform: scale(2.5);
-  }
-  50% {
-    transform: scale(3);
-  }
-}
-
-.moving-circle {
-  width: 100px; /* Increase the size */
-  height: 100px; /* Increase the size */
-  border-radius: 50%;
-  position: fixed; /* Change to fixed to position it relative to the viewport */
-  animation: scale 8s infinite; /* Slow down the animation */
-}
-
-.moving-circle.first {
-  background-color: #3a76e8;
-  bottom: 450px;
-  right: 0; /* Move up from the bottom */
-}
-
-.moving-circle.second {
-  background-color: #789de1;
-  opacity: 50%;
-  bottom: 440px; /* Different position */
-  right: 140px; /* Different position */
-}
-.moving-circle.third {
-  background-color: #789de1;
-  opacity: 50%;
-  bottom: 50px; /* Different position */
-  left:0; /* Different position */
-  z-index: -1; /* Ensures overlay is behind the content */
-
-}
-/* client/src/components/PaginationIndicator.css */
-.pagination-indicator {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  background-color: #ccc;
-  border-radius: 50%;
-  margin: 0 5px;
-  transition: background-color 0.3s;
-}
-
-.dot.active {
-  background-color: #3a76e8; /* Active color */
-}
-.dot.active2 {
-  background-color: #153c83; /* Active color */
-}
-.poppins-thin {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.poppins-extralight {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.poppins-light {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.poppins-medium {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.poppins-semibold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.poppins-bold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.poppins-extrabold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.poppins-black {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.poppins-thin-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.poppins-extralight-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: italic;
-}
-
-.poppins-light-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.poppins-regular-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.poppins-medium-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.poppins-semibold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.poppins-bold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.poppins-extrabold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-}
-
-.poppins-black-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-/* Style for the total separator line */
-.total-separator {
-  border: 0;
-  height: 1px;
-  background: #ccc; /* Adjust the color to fit your design */
-  margin: 10px 0; /* Adjust the spacing as needed */
-}
-
-

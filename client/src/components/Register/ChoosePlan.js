@@ -1,7 +1,7 @@
 // src/components/ChoosePlan.js
 import React, { useState } from 'react';
 import './RegistrationForm.css';
-import MovingCircle from '../Intros/movingCircle';
+
 
 const ChoosePlan = ({ handleCancel, handleContinue }) => {
   const [selectedPlan, setSelectedPlan] = useState('');
@@ -66,9 +66,6 @@ const ChoosePlan = ({ handleCancel, handleContinue }) => {
           <button className="continue-button" onClick={handleContinueClick}>Continue</button>
         </div>
       </div>
-      <MovingCircle className="first" size="100px" />
-      <MovingCircle className="second" size="70px" />
-      <MovingCircle className="third" size="100px" />
     </div>
   );
 };

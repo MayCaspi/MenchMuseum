@@ -1,6 +1,5 @@
 import React from 'react';
-import './Intro.css';
-
+import './MovingCircle.css';
 function MovingCircle({ className, size }) {
   return (
     <div 

@@ -1,4 +1,3 @@
-// src/components/Payment.js
 import React, { useState } from 'react';
 import './RegistrationForm';
 
